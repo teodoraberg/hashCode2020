@@ -8,7 +8,7 @@ public class InOutTest {
 
     public static void main(String[] args){
         //File in1 = new File("./in/in1.txt");
-        File in2 = Filereader.readFile("in/in1.txt");
+        File in2 = FileIO.readFile("in/in1.txt");
         Scanner scan;
         try{
             scan = new Scanner(in2);

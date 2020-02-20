@@ -3,9 +3,9 @@ package IO;
 import java.io.File;
 import java.util.Scanner;
 
-public class Filereader {
+public class FileIO {
 
-    public static final String OS = System.getProperty("os.name").toLowerCase();
+    private static final String OS = System.getProperty("os.name").toLowerCase();
 
     public static File readFile(String relPath) {
         String path = "";
