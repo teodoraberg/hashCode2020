@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class TestRead {
 
     public static void main(String[] args){
-        File in2 = FileIO.getFile("in/in1.txt.txt");
+        File in2 = FileIO.getFile("in/in1.txt");
         Scanner scan;
         try{
             scan = new Scanner(in2);
