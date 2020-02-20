@@ -1,18 +1,15 @@
 package pizza;
 import java.util.Scanner;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import IO.*;
 
 public class pizzatime {
 
-
-	
-
 		public static void main(String[] args) throws IOException {
 
-			Scanner scan = new Scanner(new File("a_example (2).in"));
+			Scanner scan = new Scanner(FileIO.getFile("in/a_example.in"));
 			int n = scan.nextInt();
 			int pizzas = scan.nextInt();
 			int counter = 0;
@@ -23,7 +20,7 @@ public class pizzatime {
 
 			// scan.close();
 
-			File file = new File("small");
+			File file = FileIO.getFile("out/pizzaout");
 
 			if (!file.exists()) {
 				file.createNewFile();

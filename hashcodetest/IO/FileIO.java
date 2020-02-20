@@ -1,7 +1,6 @@
 package IO;
 
 import java.io.File;
-import java.util.Scanner;
 
 public class FileIO {
 
