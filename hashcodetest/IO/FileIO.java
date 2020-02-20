@@ -7,7 +7,7 @@ public class FileIO {
 
     private static final String OS = System.getProperty("os.name").toLowerCase();
 
-    public static File readFile(String relPath) {
+    public static File getFile(String relPath) {
         String path = "";
 
         if(isMac()){
@@ -31,6 +31,7 @@ public class FileIO {
 
         return new File(path);
     }
+    
 
 
     private static  boolean isMac(){
