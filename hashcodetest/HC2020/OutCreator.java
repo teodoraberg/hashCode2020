@@ -6,12 +6,14 @@ import IO.Lib;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 
 public class OutCreator{
 
-    public static File createOutputFile(List<Lib> libraries, HashMap<Lib, List<Book>> bookMap, String fileName) throws IOException {
+    public static File createOutputFile(LinkedList<Lib> libraries, HashMap<Lib, ArrayList<Book>> ans, String fileName) throws IOException {
         File out = null;
 
         try {
@@ -27,9 +29,9 @@ public class OutCreator{
         for (Lib lib : libraries) {
             //Skriv bibliotekets ID och antal böcker den ska scanna på samma rad
             writer.write(String.valueOf(lib.INDEX));
-            writer.write(" " + bookMap.get(lib).size() + " \n");
+            writer.write(" " + ans.get(lib).size() + " \n");
             //Ny rad med bok IDs. Loopa igenom alla böcker och printa deras id.
-            for (Book b : bookMap.get(lib)) {
+            for (Book b : ans.get(lib)) {
                 writer.write(b.INDEX + " ");
             }
             writer.write("\n");

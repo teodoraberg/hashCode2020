@@ -6,7 +6,7 @@ import java.util.List;
 public class Lib implements Comparable<Lib> {
     public final int INDEX; 
     public final int NBRBOOKS;
-    public final ArrayList<Book> Books; 
+    public  ArrayList<Book> Books; 
     public final int SIGNUP; 
     public final int BOOKSPERDAY; 
     
