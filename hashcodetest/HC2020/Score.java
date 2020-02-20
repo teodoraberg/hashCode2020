@@ -24,11 +24,12 @@ public class Score {
         }
 
         int numlibraries = Integer.parseInt(scan.next());
-        char[] books;
+        String books;
         for(int i = 0; i < numlibraries; i++){
             scan.nextLine();
-            books = scan.nextLine().trim().toCharArray();
-            for (char c : books) {
+            books = scan.nextLine().trim();
+            books = books. replaceAll("\\s","");
+            for (char c : books.toCharArray()) {
                 String s = String.valueOf(c);
                 scoredBooks.add(Integer.parseInt(s));
             }
