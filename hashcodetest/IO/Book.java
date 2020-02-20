@@ -1,6 +1,6 @@
 package IO;
 
-public class Book {
+public class Book implements Comparable<Book>  {
     public final int INDEX; 
     public final int VALUE; 
     
@@ -8,6 +8,9 @@ public class Book {
         this.INDEX = index;
         this.VALUE = value; 
        
+    }
+    public int compareTo(Book b) {
+    	return this.INDEX-b.INDEX;
     }
     
 }

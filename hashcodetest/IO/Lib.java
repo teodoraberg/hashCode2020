@@ -3,7 +3,7 @@ package IO;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lib {
+public class Lib implements Comparable<Lib> {
     public final int INDEX; 
     public final int NBRBOOKS;
     public final ArrayList<Book> Books; 
@@ -16,6 +16,9 @@ public class Lib {
         this.Books = books; 
         this.SIGNUP = signUp; 
         this.BOOKSPERDAY = booksPerDay; 
+    }
+    public int compareTo(Lib a) {
+    	return (this.BOOKSPERDAY/this.SIGNUP-a.BOOKSPERDAY/a.SIGNUP);
     }
 
 }
