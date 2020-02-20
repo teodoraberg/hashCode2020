@@ -41,7 +41,7 @@ public class Inparser {
             String[] scndLine = scan.nextLine().split(" "); 
             ArrayList<Book> bookAtLib = new ArrayList<>(); 
             for(int j=0; j<strToInt(frstLine[0]); j++){
-                bookAtLib.add(books.get(strToInt(scndLine[i]))); 
+                bookAtLib.add(books.get(strToInt(scndLine[j]))); 
             }
             
             libraries.add(new Lib(i, strToInt(frstLine[0]), bookAtLib, strToInt(frstLine[1]), strToInt(frstLine[2]))); 
