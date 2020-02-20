@@ -10,9 +10,9 @@ public class Inparser {
     public int nbrLibraries;
     public int time;
 
-    public ArrayList<Book> books; 
-    public HashMap<Integer,Book> indexToBook; 
-    public ArrayList<Lib> libraries;
+    public ArrayList<Book> books = new ArrayList<>(); 
+    public HashMap<Integer,Book> indexToBook = new HashMap<>(); 
+    public ArrayList<Lib> libraries = new ArrayList<>();
 
     public Inparser(File file) {
         Scanner scan = null; 
@@ -52,7 +52,5 @@ public class Inparser {
     private int strToInt(String str) {
         return Integer.valueOf(str); 
     }
-    
-    
     
 }
