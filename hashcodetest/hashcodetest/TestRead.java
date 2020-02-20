@@ -4,7 +4,7 @@ import IO.*;
 import java.io.File;
 import java.util.Scanner;
 
-public class ReadTest {
+public class TestRead {
 
     public static void main(String[] args){
         //File in1 = new File("./in/in1.txt");
