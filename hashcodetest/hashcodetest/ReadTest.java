@@ -1,10 +1,10 @@
-package pizza;
+package hashcodetest;
 
 import IO.*;
 import java.io.File;
 import java.util.Scanner;
 
-public class InOutTest {
+public class ReadTest {
 
     public static void main(String[] args){
         //File in1 = new File("./in/in1.txt");

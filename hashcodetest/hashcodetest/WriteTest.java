@@ -5,7 +5,7 @@ import java.io.IOException;
 
 import IO.*;  
 
-public class IOTest {
+public class WriteTest {
     public static void main(String[] args) throws IOException {
         File writeTo = null; 
         try {
