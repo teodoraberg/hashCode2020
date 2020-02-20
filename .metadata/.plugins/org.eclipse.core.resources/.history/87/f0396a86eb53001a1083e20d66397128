@@ -1,0 +1,22 @@
+package pizza;
+
+import java.io.File;
+import java.net.URL;
+import java.util.Scanner;
+public class InOutTest {
+
+    public static void main(String[] args){
+    	try {
+        File in1 = new File("./in/in1.txt");
+    	} catch(Exception e) {
+            File in1 = new File("../in/in1.txt");
+    	}
+        Scanner scan;
+        try{
+            scan = new Scanner(in1);
+            System.out.println(scan.next());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+}
