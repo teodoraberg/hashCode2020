@@ -10,11 +10,8 @@ public class Inparser {
     public int nbrLibraries;
     public int time;
 
-    public Book[] books; 
-    public HashMap<Integer, ArrayList<Book>> libraries;
-    public int[] booksAtLib; 
-    public int[] signUpTime;
-    public int[] booksPerDay;
+    public ArrayList<Book> books; 
+    public ArrayList<Lib> libraries;
 
     public Inparser(File file) {
         Scanner scan = null; 
@@ -28,18 +25,23 @@ public class Inparser {
         nbrBooks = strToInt(firstLine[0]); 
         nbrLibraries = strToInt(firstLine[1]); 
         time = strToInt(firstLine[2]);
-        signUpTime = new int[nbrLibraries];
-        booksPerDay = new int[nbrLibraries];
-        booksAtLib = new int[nbrLibraries];
+       
         
         String[] bookVals = scan.next().split(" "); 
                 
         for(int i=0; i<nbrBooks; i++) {
-            books[i] = new Book(i, strToInt(bookVals[i])); 
+            books.add(new Book(i, strToInt(bookVals[i])));  
         }
         
         for(int i=0; i<nbrLibraries; i++) {
+            String[] frstLine = scan.next().split(" "); 
+            String[] scndLine = scan.next().split(" "); 
+            ArrayList<Book> bookAtLib = new ArrayList<>(); 
+            for(int j=0; j<strToInt(frstLine[0]); j++){
+                bookAtLib.add(books.get(strToInt(scndLine[i]))); 
+            }
             
+            libraries.add(new Lib(i, strToInt(frstLine[0]), bookAtLib, strToInt(frstLine[1]), strToInt(frstLine[2]))); 
             
             }
         
