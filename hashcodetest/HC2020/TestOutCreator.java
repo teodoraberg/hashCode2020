@@ -37,11 +37,11 @@ public class TestOutCreator {
         libBookMap.put(lib1, books1);
         libBookMap.put(lib2, books2);
 
-        try{
-            OutCreator.createOutputFile(libs, libBookMap, "testout");
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+//        try{
+//            OutCreator.createOutputFile(libs, libBookMap, "testout");
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
     }
 
 }
