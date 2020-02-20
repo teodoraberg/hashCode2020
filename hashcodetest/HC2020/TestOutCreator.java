@@ -18,7 +18,9 @@ public class TestOutCreator {
 
         Lib lib1 = new Lib(1, 3, new ArrayList<Book>(), 0, 0);
         Lib lib2 = new Lib(0, 5, new ArrayList<Book>(), 0, 0);
-        Lib[] libs = {lib1, lib2};
+        List<Lib> libs = new ArrayList<>();
+        libs.add(lib1);
+        libs.add(lib2);
         HashMap<Lib, List<Book>> libBookMap = new HashMap<>();
         ArrayList<Book> books1 = new ArrayList<>();
         ArrayList<Book> books2 = new ArrayList<>();
