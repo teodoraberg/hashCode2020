@@ -20,5 +20,7 @@ public class Lib implements Comparable<Lib> {
     public int compareTo(Lib a) {
     	return (this.BOOKSPERDAY/this.SIGNUP-a.BOOKSPERDAY/a.SIGNUP);
     }
+    
+    
 
 }

@@ -13,4 +13,7 @@ public class Book implements Comparable<Book>  {
     	return this.INDEX-b.INDEX;
     }
     
+    public int hashCode() {
+        return INDEX*347 + VALUE*647; 
+    }
 }
