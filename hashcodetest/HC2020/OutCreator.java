@@ -11,7 +11,7 @@ import java.util.List;
 
 public class OutCreator{
 
-    public static File createOutputFile(Lib[] libraries, HashMap<Lib, List<Book>> bookMap, String fileName) throws IOException {
+    public static File createOutputFile(List<Lib> libraries, HashMap<Lib, List<Book>> bookMap, String fileName) throws IOException {
         File out = null;
 
         try {
@@ -22,7 +22,7 @@ public class OutCreator{
         }
         FileWriter writer = new FileWriter(out);
 
-        writer.write(String.valueOf(libraries.length)); //Skriv antal bibliotek
+        writer.write(String.valueOf(libraries.size())); //Skriv antal bibliotek
         writer.write("\n");
         for (Lib lib : libraries) {
             //Skriv bibliotekets ID och antal böcker den ska scanna på samma rad
