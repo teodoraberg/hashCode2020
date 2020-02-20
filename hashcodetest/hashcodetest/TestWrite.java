@@ -9,13 +9,13 @@ public class TestWrite {
     public static void main(String[] args) throws IOException {
         File writeTo = null; 
         try {
-            writeTo = IO.FileIO.getFile("out/1.txt");
+            writeTo = IO.FileIO.getFile("out/out1.txt");
         }catch(Exception e) {
             System.out.println("LUL");
         }
         FileWriter writer = new FileWriter(writeTo); 
         
-        writer.append("epictime");
+        writer.append("epic");
         writer.close(); 
         System.out.println("Done!");
     }
