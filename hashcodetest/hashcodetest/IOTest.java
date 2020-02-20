@@ -15,7 +15,7 @@ public class IOTest {
         }
         FileWriter writer = new FileWriter(writeTo); 
         
-        writer.append('a'); 
+        writer.append("epic");
         writer.close(); 
         System.out.println("Done!");
     }
