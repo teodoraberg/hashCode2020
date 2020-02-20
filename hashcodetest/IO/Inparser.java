@@ -11,6 +11,7 @@ public class Inparser {
     public int time;
 
     public ArrayList<Book> books; 
+    public HashMap<Integer,Book> indexToBook; 
     public ArrayList<Lib> libraries;
 
     public Inparser(File file) {
@@ -30,7 +31,9 @@ public class Inparser {
         String[] bookVals = scan.next().split(" "); 
                 
         for(int i=0; i<nbrBooks; i++) {
-            books.add(new Book(i, strToInt(bookVals[i])));  
+            Book tempBook = new Book(i, strToInt(bookVals[i])); 
+            books.add(tempBook);
+            indexToBook.put(i, tempBook);
         }
         
         for(int i=0; i<nbrLibraries; i++) {
@@ -49,4 +52,6 @@ public class Inparser {
     private int strToInt(String str) {
         return Integer.valueOf(str); 
     }
+    
+    
 }
