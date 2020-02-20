@@ -22,13 +22,13 @@ public class Inparser {
             System.out.println("FEL");
             System.exit(1);
         }
-        String[] firstLine = scan.next().split(" "); 
+        String[] firstLine = scan.nextLine().split(" "); 
         nbrBooks = strToInt(firstLine[0]); 
         nbrLibraries = strToInt(firstLine[1]); 
         time = strToInt(firstLine[2]);
        
         
-        String[] bookVals = scan.next().split(" "); 
+        String[] bookVals = scan.nextLine().split(" "); 
                 
         for(int i=0; i<nbrBooks; i++) {
             Book tempBook = new Book(i, strToInt(bookVals[i])); 
@@ -37,8 +37,8 @@ public class Inparser {
         }
         
         for(int i=0; i<nbrLibraries; i++) {
-            String[] frstLine = scan.next().split(" "); 
-            String[] scndLine = scan.next().split(" "); 
+            String[] frstLine = scan.nextLine().split(" "); 
+            String[] scndLine = scan.nextLine().split(" "); 
             ArrayList<Book> bookAtLib = new ArrayList<>(); 
             for(int j=0; j<strToInt(frstLine[0]); j++){
                 bookAtLib.add(books.get(strToInt(scndLine[i]))); 
@@ -52,6 +52,7 @@ public class Inparser {
     private int strToInt(String str) {
         return Integer.valueOf(str); 
     }
+    
     
     
 }
