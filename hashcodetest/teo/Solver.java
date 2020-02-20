@@ -10,4 +10,12 @@ public class Solver {
         Inparser parser = new Inparser(file); 
         
     }
+
+    public int calcVal(Lib lib){
+        int score = 0;
+        for (Book b : lib.Books) {
+            score += b.VALUE;
+        }
+        return score;
+    }
 }
