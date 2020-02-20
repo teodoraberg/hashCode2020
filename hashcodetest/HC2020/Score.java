@@ -1,12 +1,14 @@
 package HC2020;
 
+import IO.Inparser;
+
 import java.io.File;
 import java.util.HashSet;
 import java.util.Scanner;
 
 public class Score {
 
-    public static int getScore(File ans){
+    public long getScore(File ans, Inparser inparser){
         HashSet<Integer> scoredBooks = new HashSet<>();
 
         Scanner scan;
@@ -22,15 +24,22 @@ public class Score {
         }
 
         int numlibraries = Integer.parseInt(scan.next());
-        char[] books;
+        String books;
         for(int i = 0; i < numlibraries; i++){
             scan.nextLine();
-            books = scan.nextLine().trim().toCharArray();
-            for (char c : books) {
+            books = scan.nextLine().trim();
+            books = books. replaceAll("\\s","");
+            for (char c : books.toCharArray()) {
                 String s = String.valueOf(c);
                 scoredBooks.add(Integer.parseInt(s));
             }
         }
-        return 0;
+
+        long score = 0;
+        for (Integer i : scoredBooks) {
+            score += inparser.indexToBook.get(i).VALUE;
+        }
+
+        return score;
     }
 }
